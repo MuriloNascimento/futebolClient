@@ -16,11 +16,11 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "EnviaTime", targetNamespace = "http://webservice.model.futebol.m104.com/")
+@WebService(name = "TimesWS", targetNamespace = "http://webservice.model.futebol.m104.com/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
-public interface EnviaTime {
+public interface TimesWS {
 
 
     /**
@@ -30,8 +30,8 @@ public interface EnviaTime {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "enviar", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.Enviar")
-    @ResponseWrapper(localName = "enviarResponse", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.EnviarResponse")
-    public List<Time> enviar();
+    @RequestWrapper(localName = "buscarTodos", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.BuscarTodos")
+    @ResponseWrapper(localName = "buscarTodosResponse", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.BuscarTodosResponse")
+    public List<Time> buscarTodos();
 
 }
