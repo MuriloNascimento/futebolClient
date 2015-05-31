@@ -34,4 +34,15 @@ public interface TimesWS {
     @ResponseWrapper(localName = "buscarTodosResponse", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.BuscarTodosResponse")
     public List<Time> buscarTodos();
 
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.m104.futebol.model.webservice.Jogador>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "buscarTodosJogadores", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.BuscarTodosJogadores")
+    @ResponseWrapper(localName = "buscarTodosJogadoresResponse", targetNamespace = "http://webservice.model.futebol.m104.com/", className = "com.m104.futebol.model.webservice.BuscarTodosJogadoresResponse")
+    public List<Jogador> buscarTodosJogadores();
+
 }

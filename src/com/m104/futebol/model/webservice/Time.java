@@ -6,9 +6,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -21,8 +19,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="escudo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="estadio" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="fundacao" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="jogadores" type="{http://webservice.model.futebol.m104.com/}jogador" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="nome" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -38,8 +36,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "time", propOrder = {
+    "escudo",
     "estadio",
-    "fundacao",
     "id",
     "jogadores",
     "nome",
@@ -48,15 +46,38 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class Time {
 
+    protected String escudo;
     protected String estadio;
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar fundacao;
     protected long id;
     @XmlElement(nillable = true)
     protected List<Jogador> jogadores;
     protected String nome;
     protected String tecnico;
     protected int titulos;
+
+    /**
+     * Gets the value of the escudo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEscudo() {
+        return escudo;
+    }
+
+    /**
+     * Sets the value of the escudo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEscudo(String value) {
+        this.escudo = value;
+    }
 
     /**
      * Gets the value of the estadio property.
@@ -80,30 +101,6 @@ public class Time {
      */
     public void setEstadio(String value) {
         this.estadio = value;
-    }
-
-    /**
-     * Gets the value of the fundacao property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getFundacao() {
-        return fundacao;
-    }
-
-    /**
-     * Sets the value of the fundacao property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setFundacao(XMLGregorianCalendar value) {
-        this.fundacao = value;
     }
 
     /**
