@@ -24,24 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _BuscarTodosJogadores_QNAME = new QName("http://webservice.model.futebol.m104.com/", "buscarTodosJogadores");
     private final static QName _BuscarTodos_QNAME = new QName("http://webservice.model.futebol.m104.com/", "buscarTodos");
     private final static QName _BuscarTodosResponse_QNAME = new QName("http://webservice.model.futebol.m104.com/", "buscarTodosResponse");
-    private final static QName _BuscarTodosJogadoresResponse_QNAME = new QName("http://webservice.model.futebol.m104.com/", "buscarTodosJogadoresResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.m104.futebol.model.webservice
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link BuscarTodosJogadoresResponse }
-     * 
-     */
-    public BuscarTodosJogadoresResponse createBuscarTodosJogadoresResponse() {
-        return new BuscarTodosJogadoresResponse();
     }
 
     /**
@@ -61,14 +51,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BuscarTodosJogadores }
-     * 
-     */
-    public BuscarTodosJogadores createBuscarTodosJogadores() {
-        return new BuscarTodosJogadores();
-    }
-
-    /**
      * Create an instance of {@link Time }
      * 
      */
@@ -82,15 +64,6 @@ public class ObjectFactory {
      */
     public Jogador createJogador() {
         return new Jogador();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarTodosJogadores }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.model.futebol.m104.com/", name = "buscarTodosJogadores")
-    public JAXBElement<BuscarTodosJogadores> createBuscarTodosJogadores(BuscarTodosJogadores value) {
-        return new JAXBElement<BuscarTodosJogadores>(_BuscarTodosJogadores_QNAME, BuscarTodosJogadores.class, null, value);
     }
 
     /**
@@ -109,15 +82,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://webservice.model.futebol.m104.com/", name = "buscarTodosResponse")
     public JAXBElement<BuscarTodosResponse> createBuscarTodosResponse(BuscarTodosResponse value) {
         return new JAXBElement<BuscarTodosResponse>(_BuscarTodosResponse_QNAME, BuscarTodosResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarTodosJogadoresResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.model.futebol.m104.com/", name = "buscarTodosJogadoresResponse")
-    public JAXBElement<BuscarTodosJogadoresResponse> createBuscarTodosJogadoresResponse(BuscarTodosJogadoresResponse value) {
-        return new JAXBElement<BuscarTodosJogadoresResponse>(_BuscarTodosJogadoresResponse_QNAME, BuscarTodosJogadoresResponse.class, null, value);
     }
 
 }
