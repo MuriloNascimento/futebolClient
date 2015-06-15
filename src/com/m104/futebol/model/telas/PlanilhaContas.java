@@ -28,7 +28,7 @@ public class PlanilhaContas {
 		Graphics2D g2 = bi.createGraphics();
 		
 		String[] contas = {"","Aluguél","Condomínio","Luz","Celulares","Internet"};
-		String[] meses = {"JAN","FEB","MAR","ABR","JUN","JUL","AGO","SET","OUT","NOV","DEZ"};
+		String[] meses = {"JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"};
 		
 		//Estilo de fonte
 		Font fonteTitulo = new Font("Arial", Font.BOLD, 80);
